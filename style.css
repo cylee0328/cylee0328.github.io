@@ -1,10 +1,10 @@
-@import url("https://cylee0328.github.io/style/nav.css");
-@import "style/home.css";
-@import "style/about.css";
-@import "style/skills.css";
-@import "style/work.css";
-@import "style/testimonials.css";
-@import "style/contact.css";
+@import "Style/nav.css";
+@import "Style/home.css";
+@import "Style/about.css";
+@import "Style/skills.css";
+@import "Style/work.css";
+@import "Style/testimonials.css";
+@import "Style/contact.css";
 /* Global */
 :root {
   /* Color */
