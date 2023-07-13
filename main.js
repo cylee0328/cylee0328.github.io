@@ -58,42 +58,6 @@ arrowUp.addEventListener("click", () => {
   scrollIntoView("#home");
 });
 
-//프로젝트 필터링
-const workCategoryBtn = document.querySelector(".work__categories");
-const projectContainer = document.querySelector(".work__projects");
-const projects = document.querySelectorAll(".project");
-
-workCategoryBtn.addEventListener("click", (event) => {
-  const filter =
-    event.target.dataset.filter || event.target.parentNode.dataset.filter;
-  if (filter == null) {
-    return;
-  }
-
-  // .active 처리
-  const active = document.querySelector(".category__btn.selected");
-  active.classList.remove("selected");
-  console.log(`nodaName: ${event.target.nodeName}`);
-  console.log(`event target: ${event.target}`);
-  const target =
-    event.target.nodeName === "BUTTON" ? event.target : event.target.parentNode;
-  console.log(`target : ${target}`);
-  target.classList.add("selected");
-
-  // 필터링 처리
-  projectContainer.classList.add("anim-out");
-  setTimeout(() => {
-    projects.forEach((project) => {
-      if (filter === "*" || filter === project.dataset.type) {
-        project.classList.remove("invisible");
-      } else {
-        project.classList.add("invisible");
-      }
-    });
-    projectContainer.classList.remove("anim-out");
-  }, 300);
-});
-
 /*
 1. 모든 섹션 요소들을 가지고 온다
 2. IntersectionObserver를 이용해서 모든 섹션들을 관찰한다
